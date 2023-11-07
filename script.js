@@ -12,5 +12,9 @@ for(let i = 0; i < squaresPerLine * squaresPerLine; i++){
     div.style.width = `${containerWidth / squaresPerLine}px`;
     div.style.height = div.style.width;
     
+    div.addEventListener('pointerover', () => {
+        div.style.backgroundColor = 'lightblue';
+    });
+
     container.appendChild(div);
 }
