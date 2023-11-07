@@ -3,7 +3,7 @@ let squaresPerLine = 16;
 const containerWidth = 960;
 const promptBtn = document.createElement('button');
 
-promptBtn.textContent = 'Ajust the number of squares per side';
+promptBtn.textContent = 'Adjust the number of squares per side';
 promptBtn.setAttribute('id', 'promptBtn');
 promptBtn.addEventListener('click', () => {
 
@@ -32,12 +32,23 @@ promptBtn.addEventListener('click', () => {
         div.style.height = div.style.width;
 
         div.addEventListener('pointerover', () => {
-            div.style.backgroundColor = 'lightblue';
+            if (div.style.backgroundColor === '') {
+                div.style.backgroundColor = getRandomColor();
+            } 
         });
 
         container.appendChild(div);
     }
 });
+
+function getRandomColor(){
+    return `rgba(${getRandomInt(256)}, ${getRandomInt(256)}, ${getRandomInt(256)}, 100%)`; 
+}
+
+function getRandomInt(max){
+    return Math.floor(Math.random() * max);
+}
+
 
 container.appendChild(promptBtn);
 
