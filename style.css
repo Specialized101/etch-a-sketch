@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
+#container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+
+.square {
+    border: 1px solid black;
+}
