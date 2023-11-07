@@ -13,3 +13,9 @@
 .square {
     border: 1px solid black;
 }
+
+#promptBtn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
